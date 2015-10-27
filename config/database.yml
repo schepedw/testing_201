@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: weekly_workshop
+  password:
+
+development:
+  <<: *default
+  database: active_resource_dev
+
+test:
+  <<: *default
+  database: active_resource_test
+
+production:
+  <<: *default
+  database: active_resource_prod
