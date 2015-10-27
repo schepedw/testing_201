@@ -14,7 +14,7 @@ We'll be using the
 we've used for a few previous lessons.
 
 1. Clone / fork this repo
-2. `cd active_resource`
+2. `cd testing_201`
 3. `bundle`
 4. `RAILS_ENV=test bundle exec rake db:create_user db:setup`
 5. `bundle exec rspec`
