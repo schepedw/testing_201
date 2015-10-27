@@ -14,7 +14,7 @@ We'll be using the
 we've used for a few previous lessons.
 
 1. Clone / fork this repo
-2. `cd active_resource`
+2. `cd testing_201`
 3. `bundle`
 4. `RAILS_ENV=test bundle exec rake db:create_user db:setup`
 5. `bundle exec rspec`
@@ -43,8 +43,8 @@ at the top, which creates all of our variables for us. How convenient!
 
 Unfortunately, `before` has some downsides - namely that it runs before
 __every__ test. Do you need each of those variables in every test? If
-not, perhaps you should consider a different rspec structure. __hint:
-check out the section title__
+not, perhaps you should consider a different rspec structure. _hint:
+check out the section title_
 
 ## Part 4: Factories, in more depth
 
