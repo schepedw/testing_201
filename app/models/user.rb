@@ -5,7 +5,7 @@
 # login      | character varying | not null
 
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :addresses #TODO: make this a has many to demonstrate factory girl ish?
+  has_and_belongs_to_many :addresses
 
   def as_json(_opts = {})
     {
@@ -15,5 +15,13 @@ class User < ActiveRecord::Base
       login: login,
       addresses: addresses.map(&:as_json)
     }
+  end
+
+  def from_chicago?
+    addresses.any?(&:chicago_address?)
+  end
+
+  def address_cities
+    addresses.map(&:city)
   end
 end

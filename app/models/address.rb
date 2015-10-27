@@ -21,7 +21,8 @@ class Address < ActiveRecord::Base
     }
   end
 
-  def from_chicago?
-    addresses.any?{ |address| address.city == 'chicago' }
+  def chicago_address?
+    (city == 'chicago' || (60600..60700).include?(zip.to_i)) &&
+      state == 'il'
   end
 end
